@@ -1,7 +1,7 @@
 import threading
 import time
-semaphore = threading.Semaphore(2)
- 
+
+semaphore = threading.Semaphore(2) 
 def func():
     if semaphore.acquire():
         for _ in range(5):
@@ -11,5 +11,5 @@ def func():
         print(threading.currentThread().getName(), 'release semaphore')
         
 for _ in range(4):
-  t1 = threading.Thread(target=func)
-  t1.start()
+    t1 = threading.Thread(target=func)
+    t1.start()

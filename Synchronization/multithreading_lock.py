@@ -1,3 +1,7 @@
+#coding=utf-8 
+'''
+This example is for concurrent process operate same data demo.
+'''
 import concurrent.futures
 import time
 import threading
