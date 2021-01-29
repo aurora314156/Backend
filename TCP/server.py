@@ -17,7 +17,7 @@ def tcp_link(sock, addr):
         msg = (f'Hello, {data}').encode('utf-8')
         sock.send(msg)
     sock.close() # close connection
-    print('Connection from {sock} {addr} close.')
+    print('Connection from:\nSocket:{}\nAddr:{}.'.format(sock, addr))
 
 def main():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # create socket
